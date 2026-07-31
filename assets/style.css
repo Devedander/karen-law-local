@@ -13,3 +13,18 @@
 .hero-coast .hero-note{left:clamp(18px,3vw,44px);bottom:clamp(18px,3vw,36px)}
 .site-credit{display:inline-block;margin-top:.45rem}.site-credit a{text-decoration:underline;text-underline-offset:3px;color:#dfe9e7}
 @media(max-width:820px){.hero:has(.hero-coast){grid-template-columns:1fr;min-height:auto}.hero-coast{min-height:auto;padding:24px 20px 78px}.hero-coast img{height:auto}.hero-coast .hero-note{left:20px;bottom:20px;width:calc(100% - 40px)}}
+
+
+/* Hero headline fit.
+   The .hero-copy padding formula centres against the full viewport, but the
+   element sits in a grid column that is only ~47% of it, so both sides were
+   getting the full gutter. Above 1160px that crushed the headline (149px wide
+   at 1920px). Right padding is now a modest gap, and the font ceiling is sized
+   for the column that actually exists. Desktop only; mobile rules are unchanged. */
+@media (min-width: 821px) {
+  .hero-copy { padding-right: clamp(32px, 4vw, 72px); }
+  .hero h1 { font-size: clamp(2.8rem, 4.2vw, 4.4rem); }
+}
+
+/* Distribute headline lines evenly and avoid orphans at untested widths. */
+.hero h1 { text-wrap: balance; }
