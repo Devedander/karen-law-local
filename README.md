@@ -1,4 +1,4 @@
-# Karen Webb Law — local design candidate
+# Karen Webb Law website
 
 A framework-free, responsive rebuild of the public Karen Webb Law site. It preserves the live site's four-page content model, current page copy, contact details, bar and broker credentials, practice areas, imagery, full terms/privacy text, and legal advertising disclaimer while presenting them in a distinct “case notebook” layout.
 
